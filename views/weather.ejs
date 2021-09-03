@@ -1,0 +1,16 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <h2>Weather</h2>
+  <div class="weather">
+    <h2>weather</h2>
+    <h3 class="title"><%= ApiData.name %></h3>
+    <p class="snippet">Temperature: <strong><%= (ApiData.main.temp - 273.15).toFixed(1) %> C</strong></p>
+    <p class="snippet">Wind: <strong><%= ApiData.wind.speed %></strong></p>
+    <p class="snippet">Humidity :<strong><%= ApiData.main.humidity %></strong></p>
+  </div>
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
